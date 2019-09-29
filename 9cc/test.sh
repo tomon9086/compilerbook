@@ -1,7 +1,7 @@
 #!/bin/bash
 try() {
-	expected="$1"
-	input="$2"
+	input="$1"
+	expected="$2"
 
 	./9cc "$input" > tmp.s
 	gcc -o tmp tmp.s
@@ -16,7 +16,13 @@ try() {
 	fi
 }
 
+echo '- one integer'
 try 0 0
 try 42 42
+
+echo '- add and subtract calculation'
+try '2+3' 5
+try '13-7' 6
+try '5+20-4' 21
 
 echo OK
