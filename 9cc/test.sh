@@ -25,4 +25,8 @@ try '2+3' 5
 try '13-7' 6
 try '5+20-4' 21
 
+echo '- add and subtract calculation with spaces'
+try '17 - 7 + 11' 21
+try '1  -	7   +9' 3
+
 echo OK
